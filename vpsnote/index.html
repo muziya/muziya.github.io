@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>VPS 问题及解决方法 随时记录 | 德君曾看</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="纯粹自己使用VPS时的记录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VPS 问题及解决方法 随时记录">
+<meta property="og:url" content="http://dejun.cengkan.com/vpsnote/index.html">
+<meta property="og:site_name" content="德君曾看">
+<meta property="og:description" content="纯粹自己使用VPS时的记录">
+<meta property="og:updated_time" content="2016-01-07T13:56:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VPS 问题及解决方法 随时记录">
+<meta name="twitter:description" content="纯粹自己使用VPS时的记录">
+  
+    <link rel="alternative" href="/atom.xml" title="德君曾看" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <!--
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">德君曾看</a>
+      </h1>
+      
+    </div>
+    -->
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://dejun.cengkan.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-vpsnote" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      VPS 问题及解决方法 随时记录
+    </h1>
+  
+
+      </header>
+      <div class="article-meta">
+          <a href="/vpsnote/" class="article-date">
+  <time datetime="2015-10-09T21:08:50.000Z" itemprop="datePublished">2015-10-10</time>
+</a>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/小技/">小技</a>
+  </div>
+
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>纯粹<br>自己<br>使用<br>VPS<br>时的<br>记录</p>
+<a id="more"></a>
+<h4 id="经常用到的命令"><a href="#经常用到的命令" class="headerlink" title="经常用到的命令"></a>经常用到的命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/root/lnmp restart</div></pre></td></tr></table></figure>
+<p>重启lnmp</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/nginx/sbin/nginx <span class="_">-s</span>  reload</div></pre></td></tr></table></figure>
+<p>重启nginx</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/php/sbin/php-fpm restart</div></pre></td></tr></table></figure>
+<p>重启php</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /xxx/</div></pre></td></tr></table></figure>
+<p>进入目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> ..</div></pre></td></tr></table></figure>
+<p>进入上一目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar cvf xxx.tar.gz /xxx</div></pre></td></tr></table></figure>
+<p>压缩 将相关文件夹进行压缩</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ar xvf xxx.tar.gz</div></pre></td></tr></table></figure>
+<p>解压（压缩格式注意）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget http://www.xyz.com/xxx.tar.gz</div></pre></td></tr></table></figure>
+<p>远程下载</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysqldump -u root -p xxx&gt;xxx.sql</div></pre></td></tr></table></figure>
+<p>数据库备份</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/root/vhost.sh</div></pre></td></tr></table></figure>
+<p>添加域名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">df -h</div></pre></td></tr></table></figure>
+<p>查看磁盘使用情况</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">du -sh * | sort -n</div></pre></td></tr></table></figure>
+<p>统计当前文件夹(目录)大小，并按文件大小排序</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/mysql/var 手动替换</div><div class="line"><span class="built_in">echo</span>&gt;/var/<span class="built_in">log</span>/btmp 清空这个日志文件</div><div class="line"><span class="built_in">echo</span>&gt;/var/<span class="built_in">log</span>/secure 清空这个日志文件</div></pre></td></tr></table></figure>
+<p>磁盘满了，看这几个地方。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/mysql/bin/mysql_install_db --user=mysql</div></pre></td></tr></table></figure>
+<p>删除掉mysql目录的日志文件，需要执行以下命令，才不会发生这种启动错误。<br>解决Linux下MySQL启动错误Starting MySQL.Manager of pid-file quit without updating file.[FAILED]</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dejun.cengkan.com/vpsnote/" data-id="ciwo32imd00131tswgmj7s2o8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vps/">vps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vps解决方法/">vps解决方法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vps问题/">vps问题</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/1Password/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          1Password 官网优惠码购买
+        
+      </div>
+    </a>
+  
+  
+    <a href="/hexo-descriptions/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hexo Next 模版 seo优化</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 德君<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

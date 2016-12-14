@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo Next 模版 seo优化 | 德君曾看</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="之前做些小网站，弄过一些seo的优化。所以建了博客，虽然不指望流量什么的，但强迫症作祟，看到每个页面descriptions和首页一模一样，keywords也是使用的tags代替，所以想自己解决这个问题。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo Next 模版 seo优化">
+<meta property="og:url" content="http://dejun.cengkan.com/hexo-descriptions/index.html">
+<meta property="og:site_name" content="德君曾看">
+<meta property="og:description" content="之前做些小网站，弄过一些seo的优化。所以建了博客，虽然不指望流量什么的，但强迫症作祟，看到每个页面descriptions和首页一模一样，keywords也是使用的tags代替，所以想自己解决这个问题。">
+<meta property="og:updated_time" content="2016-12-11T21:25:25.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo Next 模版 seo优化">
+<meta name="twitter:description" content="之前做些小网站，弄过一些seo的优化。所以建了博客，虽然不指望流量什么的，但强迫症作祟，看到每个页面descriptions和首页一模一样，keywords也是使用的tags代替，所以想自己解决这个问题。">
+  
+    <link rel="alternative" href="/atom.xml" title="德君曾看" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <!--
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">德君曾看</a>
+      </h1>
+      
+    </div>
+    -->
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://dejun.cengkan.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-hexo-descriptions" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo Next 模版 seo优化
+    </h1>
+  
+
+      </header>
+      <div class="article-meta">
+          <a href="/hexo-descriptions/" class="article-date">
+  <time datetime="2015-10-05T07:18:24.000Z" itemprop="datePublished">2015-10-05</time>
+</a>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/小技/">小技</a>
+  </div>
+
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前做些小网站，弄过一些seo的优化。<br>所以建了博客，虽然不指望流量什么的，但强迫症作祟，看到每个页面descriptions和首页一模一样，keywords也是使用的tags代替，所以想自己解决这个问题。<br><a id="more"></a></p>
+<h4 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h4><p>先给每一个新建页面添加 keywords 和 descriptions 的属性。<br>找到 /scaffolds/ 修改 post.md 添加以下属性</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">keywords: </div><div class="line">descriptions:</div></pre></td></tr></table></figure>
+<h4 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h4><p>本身 keywords if 判断已经设置好了，所以只需要修改一下 descriptions if 判断就好。<br>打开 /theme/next/layout/_partials/head.swig<br>找到</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% <span class="keyword">if</span> config.description %&#125;</div><div class="line">    &lt;meta name=<span class="string">"description"</span> content=<span class="string">"&#123;&#123; config.description &#125;&#125;"</span> /&gt;</div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure>
+<p>修改为</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;% <span class="keyword">if</span> page.descriptions %&#125;</div><div class="line">    &lt;meta name=<span class="string">"description"</span> content=<span class="string">"&#123;&#123; page.descriptions &#125;&#125;"</span> /&gt;</div><div class="line">&#123;% <span class="keyword">elif</span> config.description %&#125;</div><div class="line">    &lt;meta name=<span class="string">"description"</span> content=<span class="string">"&#123;&#123; config.description &#125;&#125;"</span> /&gt;</div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure>
+<p>然后新建一篇文章，试试看，每个页面就有了keywords descriptions 属性了。<br>填好习惯内容， git 上传，查看网页源代码，你就会发现，这两项内容都是你自己所填写内容，尤其是 descriptions ，不再是和首页一样的内容了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dejun.cengkan.com/hexo-descriptions/" data-id="ciwo32ils000g1tsw4f13jh60" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/next/">next</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/seo/">seo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模版/">模版</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/vpsnote/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          VPS 问题及解决方法 随时记录
+        
+      </div>
+    </a>
+  
+  
+    <a href="/fuzaozhinian/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">浮躁之年</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 德君<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
