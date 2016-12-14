@@ -591,7 +591,8 @@ a.article-title:hover {
   font-size: 1em;
   margin: 1.6em 20px;
   text-align: left;
-  quotes: '"' '"' "'" "'";
+  background-color: #fff;
+  border-left: 4px #999;
 }
 .article-entry blockquote footer {
   font-size: 15px;
