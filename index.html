@@ -63,47 +63,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-node" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/node/">使用nvm安装Node.js时遇到问题的解决方法</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-meta">
-          <a href="/node/" class="article-date">
-  <time datetime="2016-12-13T22:36:48.000Z" itemprop="datePublished">2016-12-14</time>
-</a>
-          
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <a id="more"></a>
-<p>安装nvm时候，需要重启终端，<br>重启后遇到-bash: nvm: command not found<br>请执行:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">source</span> ~/.nvm/nvm.sh</div></pre></td></tr></table></figure></p>
-<p>这是一次性的，下次重启终端还是会发生上述问题。<br>彻底解决方法<br>检查 ~/.profile 或者 ~/.bash_profile 中有没有这样两句<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> NVM_DIR=<span class="string">"/Users/YOURUSERNAME/.nvm"</span></div><div class="line">[ <span class="_">-s</span> <span class="string">"<span class="variable">$NVM_DIR</span>/nvm.sh"</span> ] &amp;&amp; . <span class="string">"<span class="variable">$NVM_DIR</span>/nvm.sh"</span>  <span class="comment"># This loads nvm</span></div></pre></td></tr></table></figure></p>
-<p>没有的话，加进去。<br>这两句会在 bash 启动的时候被调用，然后注册 nvm 命令。<br>在这里有个问题，在~/ 下，没有找到bash_profile<br>这个文件<br>可以在终端输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">touch .bash_profile <span class="comment">#没有.bash_profile文件时会为你创建</span></div><div class="line">open .bash_profile <span class="comment">#打开.bash_profile文件</span></div></pre></td></tr></table></figure></p>
-<p>然后输入上面的两句代码就可以了。<br>重启终端</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://dejun.cengkan.com/node/" data-id="ciwojg4c9000tn6swlr41fug6" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-nanfangxiaocheng" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -139,7 +98,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dejun.cengkan.com/nanfangxiaocheng/" data-id="ciwojg4cf000xn6sww5svuthv" class="article-share-link">Share</a>
+      <a data-url="http://dejun.cengkan.com/nanfangxiaocheng/" data-id="ciwolker6000vwgswq3oa9w24" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/南方/">南方</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/岳阳/">岳阳</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/旅行/">旅行</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/朋友/">朋友</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/绍兴/">绍兴</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/荆州/">荆州</a></li></ul>
@@ -186,7 +145,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dejun.cengkan.com/laojia/" data-id="ciwojg4c7000qn6swsqcuavug" class="article-share-link">Share</a>
+      <a data-url="http://dejun.cengkan.com/laojia/" data-id="ciwolker0000pwgswg9lv9nx3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/家人/">家人</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/老家/">老家</a></li></ul>
@@ -233,7 +192,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dejun.cengkan.com/chumendaonanfang/" data-id="ciwojg4bn0007n6swabrn4l4k" class="article-share-link">Share</a>
+      <a data-url="http://dejun.cengkan.com/chumendaonanfang/" data-id="ciwolkeqa0007wgswvoghrwkp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/南方/">南方</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/旅行/">旅行</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/朋友/">朋友</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/武汉/">武汉</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/滑板/">滑板</a></li></ul>
@@ -276,7 +235,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dejun.cengkan.com/pengyouzaijian/" data-id="ciwojg4cl0014n6swh5uxn22z" class="article-share-link">Share</a>
+      <a data-url="http://dejun.cengkan.com/pengyouzaijian/" data-id="ciwolker7000xwgswhhkko7al" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/再见/">再见</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/朋友/">朋友</a></li></ul>
@@ -323,7 +282,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dejun.cengkan.com/canon/" data-id="ciwojg4bm0006n6swpkycvhpz" class="article-share-link">Share</a>
+      <a data-url="http://dejun.cengkan.com/canon/" data-id="ciwolkeq90006wgswk5hg9but" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Canon/">Canon</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分享/">分享</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/卡农/">卡农</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/音乐/">音乐</a></li></ul>
@@ -370,7 +329,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dejun.cengkan.com/2016/" data-id="ciwojg4b70000n6sw56ldq2mx" class="article-share-link">Share</a>
+      <a data-url="http://dejun.cengkan.com/2016/" data-id="ciwolkeq50005wgsww0e818im" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小结/">小结</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li></ul>
@@ -417,7 +376,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dejun.cengkan.com/laopaoer/" data-id="ciwojg4cc000vn6sw7tu9ua75" class="article-share-link">Share</a>
+      <a data-url="http://dejun.cengkan.com/laopaoer/" data-id="ciwolker4000twgsw7nq2t41b" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/电影/">电影</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/老炮儿/">老炮儿</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/观后感/">观后感</a></li></ul>
@@ -464,7 +423,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dejun.cengkan.com/wodeshaonianshidai/" data-id="ciwojg4ct001gn6sw1umdged1" class="article-share-link">Share</a>
+      <a data-url="http://dejun.cengkan.com/wodeshaonianshidai/" data-id="ciwolkerl001awgswu3wjbsug" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/我的少女时代/">我的少女时代</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/电影/">电影</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/观后感/">观后感</a></li></ul>
@@ -511,10 +470,57 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dejun.cengkan.com/yayaya/" data-id="ciwojg4cq001dn6swcgmjvwp1" class="article-share-link">Share</a>
+      <a data-url="http://dejun.cengkan.com/yayaya/" data-id="ciwolkerp001dwgsw9olppqjr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/牙套/">牙套</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/矫正牙齿/">矫正牙齿</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-TheMartian" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/TheMartian/">火星救援，知识之巅</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-meta">
+          <a href="/TheMartian/" class="article-date">
+  <time datetime="2015-12-06T13:39:12.000Z" itemprop="datePublished">2015-12-06</time>
+</a>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/小记/">小记</a>
+  </div>
+
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2015年12月01日看的这场电影。<br>经历了学车、考试、搬家等一些忙忙碌碌的琐事，决定给自己放松一下，正好糯米上也有几百块，本就打算用这些钱看电影吃东西，可惜出门甚少，过了大半年还有几百块。<br>本来想看之前网评很好的《我的少女时代》，但一想，一个人去看基本上是情侣人群的爱情电影有点自讨无趣。浏览到别的上档电影，看到了火星救援，之前微博有人推荐过，正好这个题材个人也觉得很少情侣会来看吧（事实证明我想错了）。<br>
+        
+          <p class="article-more-link">
+            <a href="/TheMartian/#more">阅读全文...</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dejun.cengkan.com/TheMartian/" data-id="ciwolkepy0002wgsw2vicdvca" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/火星救援/">火星救援</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/电影/">电影</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/观后感/">观后感</a></li></ul>
 
     </footer>
   </div>
