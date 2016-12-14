@@ -269,7 +269,7 @@ body {
   font-weight: bold;
 }
 #header {
-  height: 0px;
+  height: 1px;
   position: relative;
   border-bottom: 1px solid #ddd;
 }
