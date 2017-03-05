@@ -186,7 +186,7 @@ th {
 body {
   position: relative;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 100%;
+  font-size: 1em;
   line-height: 2;
   color: #555;
   background: #fff;
@@ -203,7 +203,7 @@ body {
 }
 @media (min-width: 1600px) {
   body {
-    font-size: 102%;
+    font-size: 3em;
   }
 }
 h1,
@@ -454,8 +454,8 @@ body {
 }
 .header-inner {
   margin: 0 auto;
-  padding: 100px 0 70px;
-  width: 1000px;
+  padding: 120px 0 120px;
+  width: 980px;
 }
 @media (min-width: 1600px) {
   .container .header-inner {
@@ -467,7 +467,7 @@ body {
 }
 .main-inner {
   margin: 0 auto;
-  width: 1000px;
+  width: 980px;
 }
 @media (min-width: 1600px) {
   .container .main-inner {
@@ -484,7 +484,7 @@ body {
 .footer-inner {
   box-sizing: border-box;
   margin: 20px auto;
-  width: 1000px;
+  width: 980px;
 }
 @media (min-width: 1600px) {
   .container .footer-inner {
@@ -1015,9 +1015,10 @@ pre .javascript .function {
 }
 .site-title {
   display: inline-block;
+  padding: 0 40px;
   vertical-align: top;
-  line-height: 36px;
-  font-size: 20px;
+  line-height: 60px;
+  font-size: 28px;
   font-weight: normal;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -1088,7 +1089,7 @@ pre .javascript .function {
 }
 .menu .menu-item a {
   display: block;
-  font-size: 13px;
+  font-size: 18px;
   text-transform: capitalize;
   line-height: inherit;
   border-bottom: 1px solid transparent;
@@ -1125,7 +1126,7 @@ pre .javascript .function {
 .post-body .figure .caption {
   margin: 10px auto 15px;
   text-align: center;
-  font-size: 100%;
+  font-size: 1em;
   color: #999;
   font-weight: bold;
   line-height: 1;
@@ -1681,7 +1682,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #94f503;
+  background: #9a6b78;
 }
 .links-of-blogroll {
   font-size: 13px;
