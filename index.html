@@ -30,13 +30,13 @@
 
 
 
-<link rel="canonical" href="http://dejun.cengkan.com/"/>
+<link rel="canonical" href="http://cengkan.com/"/>
 
 
 <meta name="description" content="德君曾看，随笔小记">
 <meta property="og:type" content="website">
 <meta property="og:title" content="德君曾看">
-<meta property="og:url" content="http://dejun.cengkan.com/index.html">
+<meta property="og:url" content="http://cengkan.com/index.html">
 <meta property="og:site_name" content="德君曾看">
 <meta property="og:description" content="德君曾看，随笔小记">
 <meta name="twitter:card" content="summary">
@@ -113,7 +113,7 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          <a class="post-link" href="/https/"></a>
+          <a class="post-link" href="/https/">LNMP http 自动跳转 https nginx 代码</a>
         
       </h1>
 
@@ -132,8 +132,7 @@
             
 
             
-              <p>title: LNMP http 自动跳转 https nginx 代码<br>date: 2018-09-09 17:51:46<br>tags: [LNMP,安装,问题,解决方法,教程]<br>categories: 小技<br>keywords: LNMP http 自动跳转 https nginx 代码 </p>
-<h1 id="LNMP-http-自动跳转-https-nginx-代码"><a href="#LNMP-http-自动跳转-https-nginx-代码" class="headerlink" title="LNMP http 自动跳转 https nginx 代码"></a>LNMP http 自动跳转 https nginx 代码</h1><p>Google 搜索自己的站，发现分别收录了 http 和 https 两个首页，发觉也需要做重定向避免权重被稀释。</p>
+              <h1 id="LNMP-http-自动跳转-https-nginx-代码"><a href="#LNMP-http-自动跳转-https-nginx-代码" class="headerlink" title="LNMP http 自动跳转 https nginx 代码"></a>LNMP http 自动跳转 https nginx 代码</h1><p>Google 搜索自己的站，发现分别收录了 http 和 https 两个首页，发觉也需要做重定向避免权重被稀释。</p>
 <p>查了一下重定向的方法，还是 301 的方式最好。</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">return</span> <span class="number">301</span> https://<span class="variable">$server_name</span><span class="variable">$request_uri</span>;</div></pre></td></tr></table></figure>
 <p>直接添加到 .conf 文件中，结果发生了循环重定向的问题。</p>
@@ -293,7 +292,7 @@
     
     <section id="tags" class="widget-area widget_tags">
         <h3 class="widget-title">Tags</h3>
-        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/HEXO/">HEXO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/教程/">教程</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小结/">小结</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/火星救援/">火星救援</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电影/">电影</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/观后感/">观后感</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/旅行/">旅行</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/滑板/">滑板</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/武汉/">武汉</a><span class="tag-list-count">1</span></li></ul>
+        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/教程/">教程</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小结/">小结</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/火星救援/">火星救援</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电影/">电影</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/观后感/">观后感</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/音乐/">音乐</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分享/">分享</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/卡农/">卡农</a><span class="tag-list-count">1</span></li></ul>
     </section>
 
 

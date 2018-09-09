@@ -12,10 +12,12 @@
 
 
 
-  <meta name="description" content="德君曾看，随笔小记"/>
+  <meta name="description" content="LNMP http 自动跳转 https nginx 代码"/>
 
 
 
+
+  <meta name="keywords" content="LNMP http 自动跳转 https nginx 代码" />
 
 
 
@@ -30,22 +32,28 @@
 
 
 
-<link rel="canonical" href="http://dejun.cengkan.com/https/"/>
+<link rel="canonical" href="http://cengkan.com/https/"/>
 
 
-<meta name="description" content="title: LNMP http 自动跳转 https nginx 代码date: 2018-09-09 17:51:46tags: [LNMP,安装,问题,解决方法,教程]categories: 小技keywords: LNMP http 自动跳转 https nginx 代码 
-LNMP http 自动跳转 https nginx 代码Google 搜索自己的站，发现分别收录了 http 和">
+<meta name="description" content="LNMP http 自动跳转 https nginx 代码Google 搜索自己的站，发现分别收录了 http 和 https 两个首页，发觉也需要做重定向避免权重被稀释。
+查了一下重定向的方法，还是 301 的方式最好。
+1return 301 https://$server_name$request_uri;
+直接添加到 .conf 文件中，结果发生了循环重定向的问题。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="德君曾看">
-<meta property="og:url" content="http://dejun.cengkan.com/https/index.html">
+<meta property="og:title" content="LNMP http 自动跳转 https nginx 代码">
+<meta property="og:url" content="http://cengkan.com/https/index.html">
 <meta property="og:site_name" content="德君曾看">
-<meta property="og:description" content="title: LNMP http 自动跳转 https nginx 代码date: 2018-09-09 17:51:46tags: [LNMP,安装,问题,解决方法,教程]categories: 小技keywords: LNMP http 自动跳转 https nginx 代码 
-LNMP http 自动跳转 https nginx 代码Google 搜索自己的站，发现分别收录了 http 和">
-<meta property="og:updated_time" content="2018-09-09T15:37:36.661Z">
+<meta property="og:description" content="LNMP http 自动跳转 https nginx 代码Google 搜索自己的站，发现分别收录了 http 和 https 两个首页，发觉也需要做重定向避免权重被稀释。
+查了一下重定向的方法，还是 301 的方式最好。
+1return 301 https://$server_name$request_uri;
+直接添加到 .conf 文件中，结果发生了循环重定向的问题。">
+<meta property="og:updated_time" content="2018-09-09T16:13:00.484Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="德君曾看">
-<meta name="twitter:description" content="title: LNMP http 自动跳转 https nginx 代码date: 2018-09-09 17:51:46tags: [LNMP,安装,问题,解决方法,教程]categories: 小技keywords: LNMP http 自动跳转 https nginx 代码 
-LNMP http 自动跳转 https nginx 代码Google 搜索自己的站，发现分别收录了 http 和">
+<meta name="twitter:title" content="LNMP http 自动跳转 https nginx 代码">
+<meta name="twitter:description" content="LNMP http 自动跳转 https nginx 代码Google 搜索自己的站，发现分别收录了 http 和 https 两个首页，发觉也需要做重定向避免权重被稀释。
+查了一下重定向的方法，还是 301 的方式最好。
+1return 301 https://$server_name$request_uri;
+直接添加到 .conf 文件中，结果发生了循环重定向的问题。">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
@@ -70,7 +78,7 @@ LNMP http 自动跳转 https nginx 代码Google 搜索自己的站，发现分�
 
 
 
-    <title>  - 德君曾看 </title>
+    <title> LNMP http 自动跳转 https nginx 代码 - 德君曾看 </title>
   </head>
 
   <body>
@@ -116,7 +124,7 @@ LNMP http 自动跳转 https nginx 代码Google 搜索自己的站，发现分�
     <header class="post-header">
       <h1 class="post-title">
         
-          
+          LNMP http 自动跳转 https nginx 代码
         
       </h1>
 
@@ -129,8 +137,7 @@ LNMP http 自动跳转 https nginx 代码Google 搜索自己的站，发现分�
 
     
             <div class="post-content">
-            <p>title: LNMP http 自动跳转 https nginx 代码<br>date: 2018-09-09 17:51:46<br>tags: [LNMP,安装,问题,解决方法,教程]<br>categories: 小技<br>keywords: LNMP http 自动跳转 https nginx 代码 </p>
-<h1 id="LNMP-http-自动跳转-https-nginx-代码"><a href="#LNMP-http-自动跳转-https-nginx-代码" class="headerlink" title="LNMP http 自动跳转 https nginx 代码"></a>LNMP http 自动跳转 https nginx 代码</h1><p>Google 搜索自己的站，发现分别收录了 http 和 https 两个首页，发觉也需要做重定向避免权重被稀释。</p>
+            <h1 id="LNMP-http-自动跳转-https-nginx-代码"><a href="#LNMP-http-自动跳转-https-nginx-代码" class="headerlink" title="LNMP http 自动跳转 https nginx 代码"></a>LNMP http 自动跳转 https nginx 代码</h1><p>Google 搜索自己的站，发现分别收录了 http 和 https 两个首页，发觉也需要做重定向避免权重被稀释。</p>
 <p>查了一下重定向的方法，还是 301 的方式最好。</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">return</span> <span class="number">301</span> https://<span class="variable">$server_name</span><span class="variable">$request_uri</span>;</div></pre></td></tr></table></figure>
 <p>直接添加到 .conf 文件中，结果发生了循环重定向的问题。</p>
@@ -147,6 +154,20 @@ LNMP http 自动跳转 https nginx 代码Google 搜索自己的站，发现分�
 
     
       <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/教程/">教程</a>
+		  
+			<a href="/tags/安装/">安装</a>
+		  
+			<a href="/tags/问题/">问题</a>
+		  
+			<a href="/tags/解决方法/">解决方法</a>
+		  
+			<a href="/tags/LNMP/">LNMP</a>
+		  
+		</div>
 		
 
         
