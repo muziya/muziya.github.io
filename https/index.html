@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="德君曾看，随笔小记"/>
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/default" title="德君曾看">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="http://dejun.cengkan.com/https/"/>
+
+
+<meta name="description" content="title: LNMP http 自动跳转 https nginx 代码date: 2018-09-09 17:51:46tags: [LNMP,安装,问题,解决方法,教程]categories: 小技keywords: LNMP http 自动跳转 https nginx 代码 
+LNMP http 自动跳转 https nginx 代码Google 搜索自己的站，发现分别收录了 http 和">
+<meta property="og:type" content="article">
+<meta property="og:title" content="德君曾看">
+<meta property="og:url" content="http://dejun.cengkan.com/https/index.html">
+<meta property="og:site_name" content="德君曾看">
+<meta property="og:description" content="title: LNMP http 自动跳转 https nginx 代码date: 2018-09-09 17:51:46tags: [LNMP,安装,问题,解决方法,教程]categories: 小技keywords: LNMP http 自动跳转 https nginx 代码 
+LNMP http 自动跳转 https nginx 代码Google 搜索自己的站，发现分别收录了 http 和">
+<meta property="og:updated_time" content="2018-09-09T09:38:01.794Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="德君曾看">
+<meta name="twitter:description" content="title: LNMP http 自动跳转 https nginx 代码date: 2018-09-09 17:51:46tags: [LNMP,安装,问题,解决方法,教程]categories: 小技keywords: LNMP http 自动跳转 https nginx 代码 
+LNMP http 自动跳转 https nginx 代码Google 搜索自己的站，发现分别收录了 http 和">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title>  - 德君曾看 </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">德君曾看</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          
+        
+      </h1>
+
+      <time class="post-time">
+          Sep 09 2018
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <p>title: LNMP http 自动跳转 https nginx 代码<br>date: 2018-09-09 17:51:46<br>tags: [LNMP,安装,问题,解决方法,教程]<br>categories: 小技<br>keywords: LNMP http 自动跳转 https nginx 代码 </p>
+<h1 id="LNMP-http-自动跳转-https-nginx-代码"><a href="#LNMP-http-自动跳转-https-nginx-代码" class="headerlink" title="LNMP http 自动跳转 https nginx 代码"></a>LNMP http 自动跳转 https nginx 代码</h1><p>Google 搜索自己的站，发现分别收录了 http 和 https 两个首页，发觉也需要做重定向避免权重被稀释。</p>
+<p>查了一下重定向的方法，还是 301 的方式最好。</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">return</span> <span class="number">301</span> https://<span class="variable">$server_name</span><span class="variable">$request_uri</span>;</div></pre></td></tr></table></figure>
+<p>直接添加到 .conf 文件中，结果发生了循环重定向的问题。</p>
+<a id="more"></a>
+<p>添加了关键字 LNMP 再次搜索，找到了问题的关键。</p>
+<p>LNMP 环境生成的 nginx.conf 文件没有 443 端口的配置，之前没有要重定向，直接 443 端口的监听写在了 80 端口一起。</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="section">server</span></div><div class="line">    &#123;</div><div class="line">        <span class="attribute">listen</span> <span class="number">80</span>;</div><div class="line">        <span class="attribute">listen</span> <span class="number">443</span> ssl;</div><div class="line">        <span class="attribute">ssl_certificate</span>      /dir/xx.crt;</div><div class="line">        <span class="attribute">ssl_certificate_key</span>  /dir/xx.key;</div><div class="line">        <span class="attribute">ssl_dhparam</span>          /dir/dhparam.pem;</div><div class="line">        <span class="comment">#listen [::]:80 default_server ipv6only=on;</span></div><div class="line">        <span class="attribute">server_name</span> www.yourname.com yourname.com;</div><div class="line">        <span class="attribute">index</span> index.html index.htm index.php;</div><div class="line">        <span class="attribute">root</span>  /your/wwwroot/;</div><div class="line">     &#125;</div></pre></td></tr></table></figure>
+<p>现在需要重新写一个单独的 443 端口部分。</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># https部分</span></div><div class="line"><span class="section">server</span> &#123;</div><div class="line">        <span class="attribute">listen</span> <span class="number">443</span> ssl;</div><div class="line">        <span class="attribute">server_name</span>  yourname.com;</div><div class="line">        <span class="attribute">ssl_certificate</span>      /dir/xx.crt;</div><div class="line">        <span class="attribute">ssl_certificate_key</span>  /dir/xx.key;</div><div class="line">        <span class="attribute">ssl_dhparam</span>          /dir/dhparam.pem;</div><div class="line">        <span class="attribute">ssl_session_timeout</span>  <span class="number">5m</span>;</div><div class="line">        <span class="attribute">ssl_protocols</span>  TLSv1 TLSv1.<span class="number">1</span> TLSv1.<span class="number">2</span>;</div><div class="line">        <span class="attribute">ssl_prefer_server_ciphers</span>   <span class="literal">on</span>;</div><div class="line">        <span class="attribute">ssl_ciphers</span>  ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+EXP;</div><div class="line">        <span class="attribute">location</span> / &#123;</div><div class="line">            <span class="attribute">root</span>   /your/wwwroot/;</div><div class="line">            <span class="attribute">index</span>  index.html index.htm index.jsp index.do;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"><span class="comment"># http部分</span></div><div class="line"><span class="section">server</span> &#123;</div><div class="line">	<span class="attribute">listen</span>	<span class="number">80</span>;</div><div class="line">	<span class="attribute">server_name</span> yourname.com;</div><div class="line">	<span class="attribute">return</span> <span class="number">301</span> https://<span class="variable">$server_name</span><span class="variable">$request_uri</span>;</div><div class="line">	<span class="attribute">location</span> / &#123;</div><div class="line">            <span class="attribute">root</span>   /your/wwwroot/;</div><div class="line">            <span class="attribute">index</span>  index.html index.htm index.jsp index.do;</div><div class="line">        &#125;</div><div class="line">    <span class="comment"># http部分的location字段可保留可删除</span></div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>重启 nginx, 效果达到。</p>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/shujukubaocuo/">
+        <span class="next-text nav-default">好久没弄的服务器，数据库各种报错</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2015 -
+    
+    2018
+    <span class="footer-author">德君.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>

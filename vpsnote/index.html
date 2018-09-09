@@ -41,7 +41,7 @@
 <meta property="og:url" content="http://dejun.cengkan.com/vpsnote/index.html">
 <meta property="og:site_name" content="德君曾看">
 <meta property="og:description" content="纯粹自己使用VPS时的记录">
-<meta property="og:updated_time" content="2016-01-07T13:56:32.000Z">
+<meta property="og:updated_time" content="2018-08-22T23:56:45.053Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VPS 问题及解决方法 随时记录">
 <meta name="twitter:description" content="纯粹自己使用VPS时的记录">
@@ -158,6 +158,13 @@
 <p>磁盘满了，看这几个地方。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/mysql/bin/mysql_install_db --user=mysql</div></pre></td></tr></table></figure>
 <p>删除掉mysql目录的日志文件，需要执行以下命令，才不会发生这种启动错误。<br>解决Linux下MySQL启动错误Starting MySQL.Manager of pid-file quit without updating file.[FAILED]</p>
+<p>2018.08.23</p>
+<p>后台升级插件失败报错：</p>
+<p>Briefly unavailable for scheduled maintenance. Check back in a minute.</p>
+<p>解决方法：</p>
+<p>在 Wordpress 根目录找到 .maintenance 格式的文件，删除。</p>
+<p>如果找不到，说明隐藏了，ssh 连接进入 Wordpress 根目录，执行下面的命令。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm <span class="_">-f</span> .maintenance</div></pre></td></tr></table></figure>
 
             </div>
           
